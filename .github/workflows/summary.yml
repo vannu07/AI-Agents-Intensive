@@ -33,7 +33,10 @@ jobs:
 
       - name: Comment with AI summary
         run: |
-          gh issue comment $ISSUE_NUMBER --body "$RESPONSE"
+          tmpfile="$(mktemp)"
+          printf '%s' "$RESPONSE" > "$tmpfile"
+          gh issue comment "$ISSUE_NUMBER" --body-file "$tmpfile"
+          rm -f "$tmpfile"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
