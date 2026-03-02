@@ -1,0 +1,31 @@
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['**/*.md', 'docs/**']
+
+agent-fundamentals:
+  - changed-files:
+    - any-glob-to-any-file: '01-agent-fundamentals/**'
+
+advanced-tools:
+  - changed-files:
+    - any-glob-to-any-file: '02-advanced-tools/**'
+
+sessions-memory:
+  - changed-files:
+    - any-glob-to-any-file: '03-sessions-memory/**'
+
+observability-evaluation:
+  - changed-files:
+    - any-glob-to-any-file: '04-observability-evaluation/**'
+
+production-deployment:
+  - changed-files:
+    - any-glob-to-any-file: '05-production-deployment/**'
+
+capstone-project:
+  - changed-files:
+    - any-glob-to-any-file: '06-capstone-project/**'
+
+github-actions:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
